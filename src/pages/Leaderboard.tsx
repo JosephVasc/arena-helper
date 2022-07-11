@@ -28,11 +28,8 @@ export default class Leaderboard extends React.Component {
   } 
   createTableWithData() {
     var table = document.getElementsByTagName("tbody")[0];
-    console.log(this.leaderBoard);
     table.innerHTML = "";
     for (var i = 0; i < 3000; i++) {
-      // make entire table bold
-
       var row = table.insertRow(i);
       var rank = row.insertCell(0);
       var name = row.insertCell(1);
@@ -90,7 +87,6 @@ export default class Leaderboard extends React.Component {
     return (
       <div className="jumbotron m-auto d-flex justify-content-center">
         <Container>
-        <Button onClick={this.leaderBoardUpdate} variant="primary">Refresh</Button>
         <br></br>
         <select className="form-select" onChange={(e) => {this.season = e.target.value; this.leaderBoardUpdate();}}>
         <option value="32">SL Season 3</option>

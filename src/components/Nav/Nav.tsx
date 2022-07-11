@@ -31,6 +31,7 @@ export default class NavBar extends React.Component {
           <Nav className="ml-auto">
             <Nav.Link to="/leaderboard" as={NavLink}>
               <Button variant="outline-dark" onClick={this.scrollToTop}>
+                Leaderboard
               </Button>
             </Nav.Link>
           </Nav>
