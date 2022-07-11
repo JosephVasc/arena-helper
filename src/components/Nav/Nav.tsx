@@ -7,6 +7,12 @@ import { faTrophy } from '@fortawesome/free-solid-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default class NavBar extends React.Component {
+  scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
   render() {
     return (
         <NavbarBs sticky="top" className="bg-gradient-dark   shadow-sm mb-3">
@@ -20,6 +26,12 @@ export default class NavBar extends React.Component {
             </Nav.Link>
             <Nav.Link to="/search" as={NavLink}>
               <FontAwesomeIcon icon={faSearch} />
+            </Nav.Link>
+          </Nav>
+          <Nav className="ml-auto">
+            <Nav.Link to="/leaderboard" as={NavLink}>
+              <Button variant="outline-dark" onClick={this.scrollToTop}>
+              </Button>
             </Nav.Link>
           </Nav>
           </Container>
